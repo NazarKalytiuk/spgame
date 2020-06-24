@@ -30,10 +30,10 @@ export class GameComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.settingsForm = this.fb.group({
-      fillingTime: [2000, [Validators.min(1), Validators.required, Validators.pattern('^[0-9]*$')]],
-      runningTime: [5000, [Validators.min(1), Validators.required, Validators.pattern('^[0-9]*$')]],
-      userCount: [700, [Validators.min(1), Validators.required, Validators.pattern('^[0-9]*$')]],
-      wonPercentage: [70, [Validators.min(0), Validators.required, Validators.pattern('^[0-9]*$')]],
+      fillingTime: [, [Validators.min(1), Validators.required, Validators.pattern('^[0-9]*$')]],
+      runningTime: [, [Validators.min(1), Validators.required, Validators.pattern('^[0-9]*$')]],
+      userCount: [, [Validators.min(1), Validators.required, Validators.pattern('^[0-9]*$')]],
+      wonPercentage: [, [Validators.min(0), Validators.required, Validators.pattern('^[0-9]*$')]],
     });
 
   }
