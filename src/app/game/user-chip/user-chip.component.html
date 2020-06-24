@@ -1,0 +1,10 @@
+<div class="chip" [class.won]="user.status === 'Won'" [class.loss]="user.status === 'Loss'">
+  <img [src]="user.avatar" alt="">
+  <span class="name">{{ user.name }}</span>
+
+  <container-element [ngSwitch]="user.status">
+    <span *ngSwitchCase="'Default'" class="badge badge-secondary">{{ user.status }}</span>
+    <span *ngSwitchCase="'Won'" class="badge badge-success">{{ user.status }}</span>
+    <span *ngSwitchCase="'Loss'" class="badge badge-danger">{{ user.status }}</span>
+  </container-element>
+</div>

@@ -1,0 +1,37 @@
+:host {
+  display: inline-flex;
+  margin: 0 10px 10px 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  background-color: #e1e2e4;
+  border: 1px solid #d5d7da;
+
+  &.loss {
+    background-color: #f6ccd1;
+    border-color: #f1b8bf;
+    color: #5d121b
+  }
+  &.won {
+    background-color: #dbedd9;
+    border-color: #cce5cb;
+    color: #14471b
+  }
+}
+.name {
+  line-height: 40px;
+  margin: 0 5px 0 0;
+}
+.chip img {
+  float: left;
+  margin: 0 5px 0 -20px;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+}

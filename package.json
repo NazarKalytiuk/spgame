@@ -19,8 +19,14 @@
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "@types/chance": "^1.1.0",
+    "@types/immutable": "^3.8.7",
+    "bootstrap": "^4.5.0",
+    "chance": "^1.1.6",
+    "immutable": "^4.0.0-rc.12",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "uuid": "^8.2.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

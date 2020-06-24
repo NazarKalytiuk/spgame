@@ -1,0 +1,57 @@
+<form [formGroup]="settingsForm">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Filling time:</label>
+          <input type="number" class="form-control" formControlName="fillingTime" placeholder="Enter filling time">
+          <small class="form-text text-muted">Please set value in milliseconds</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Running time:</label>
+          <input type="number" class="form-control" formControlName="runningTime" placeholder="Enter running time">
+          <small class="form-text text-muted">Please set value in milliseconds</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Users count:</label>
+          <input type="number" class="form-control" formControlName="userCount" placeholder="Enter users count">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Won percentage:</label>
+          <input type="number" class="form-control" formControlName="wonPercentage" placeholder="Enter percentage">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <div class="card-header">
+          <span>Status: </span>
+
+          <container-element [ngSwitch]="status">
+            <span *ngSwitchCase="'Filling'" class="badge badge-info">{{ status }}</span>
+            <span *ngSwitchCase="'Running'" class="badge badge-warning">{{ status }}</span>
+            <span *ngSwitchCase="'Finish'" class="badge badge-primary">{{ status }}</span>
+          </container-element>
+        </div>
+        <div class="card-body">
+          <app-user-chip *ngFor="let u of users; trackBy: trackUser" [user]="u[1]"></app-user-chip>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <button type="button" type="submit" (click)="submitForm()" class="btn btn-primary btn-lg btn-block">Start</button>
+    <p>TIME: <span class="timer">{{time | time}}</span></p>
+  </div>
+
+</form>
